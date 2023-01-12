@@ -1,2 +1,18 @@
-@import "variables";
-@import "mixins";
+@import "_variables";
+@import "_mixins";
+
+.toolbar {
+	height: $toolbar-height;
+	position: absolute;
+	top: 34px;
+	left: 0;
+	width: 100%;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+	padding: 7px 10px;
+	display: flex;
+
+	&__button {
+		@include button()
+	}
+}
