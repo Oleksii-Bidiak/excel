@@ -1,0 +1,45 @@
+@import "_variables";
+@import "_mixins";
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $header-height;
+	padding: 8px 4px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__input {
+		margin: 0;
+		padding: 2px 7px;
+		border: 1px solid transparent;
+		border-radius: 2px;
+		height: 20px;
+		outline: none;
+		line-height: 22px;
+		font-size: 18px;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			border: 1px solid $border-color;
+		}
+
+		&:focus {
+			border: 1px solid #1a73e8;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+
+	}
+
+	&__button {
+		@include button(red);
+	}
+}
